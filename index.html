@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wind V Client | The Ultimate 1.8.9 PvP Experience</title>
-    <link rel="icon" type="image/png" href="logo.png">
+    <link class="mod-card" rel="icon" type="image/png" href="logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
@@ -46,7 +46,6 @@
 
 <body class="overflow-x-hidden">
 
-    <!-- ナビゲーションバー -->
     <nav class="fixed top-0 left-0 right-0 z-50 glass border-none">
         <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
             <div class="flex items-center gap-2">
@@ -56,13 +55,12 @@
             <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-400">
                 <a href="#features" class="hover:text-white transition">Features</a>
                 <a href="#mod-list" class="hover:text-white transition">Mod List</a>
-                <a href="https://github.com/WindVClient/WindVClient/Beta/download/RELEASE/WindVClient-1.0.0.jar"
+                <a href="https://github.com/WindVClient/WindVClient/releases/latest/download/WindVClient-1.0.0.jar"
                     class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition">Download</a>
             </div>
         </div>
     </nav>
 
-    <!-- ヒーローセクション -->
     <header class="relative pt-48 pb-32 px-4 text-center">
         <div class="absolute top-20 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-blue-600/20 blur-[120px] -z-10">
         </div>
@@ -71,132 +69,4 @@
         </div>
         <h1 class="text-5xl md:text-7xl font-800 mb-6 tracking-tight tracking-tighter uppercase">WIND <span
                 class="gradient-text">V</span> CLIENT</h1>
-        <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-            1.8.9 PvPに特化した、軽量・高機能なユーティリティクライアント。<br>
-            日本語入力、1.7アニメーション、高度なHUDエディタを標準搭載。
-        </p>
-        <div class="flex flex-col md:flex-row justify-center gap-4">
-            <a href="https://github.com/WindVClient/WindVClient/releases/download/Beta/WindVClient-1.0.0.jar"
-                class="px-12 py-5 bg-white text-black font-bold rounded-xl hover:scale-105 transition shadow-lg shadow-white/10 flex items-center justify-center gap-2">
-                <span>WindVClient-1.0.0.jar をダウンロード</span>
-            </a>
-        </div>
-    </header>
-
-    <!-- 特徴セクション -->
-    <section id="features" class="max-w-7xl mx-auto px-8 py-20">
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="glass p-8 rounded-3xl border-blue-500/20">
-                <div class="text-blue-400 text-4xl mb-4 font-bold">JP</div>
-                <h3 class="text-xl font-bold mb-2">Japanese IME Patch</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">チャット欄での日本語入力を完全サポート。変換ミスやバグに悩まされることはありません。</p>
-            </div>
-            <div class="glass p-8 rounded-3xl border-purple-500/20">
-                <div class="text-purple-400 text-4xl mb-4 font-bold">UI</div>
-                <h3 class="text-xl font-bold mb-2">Modern HUD Editor</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">全ての要素をドラッグ＆ドロップで直感的に配置。あなただけの完璧なPvP画面を構築できます。</p>
-            </div>
-            <div class="glass p-8 rounded-3xl border-green-400/20">
-                <div class="text-green-400 text-4xl mb-4 font-bold">1.7</div>
-                <h3 class="text-xl font-bold mb-2">Old Animations</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">1.8.9上で、1.7風の剣のガードやアニメーションを再現。PvPの打撃感が格段に向上します。</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mod一覧セクション -->
-    <section id="mod-list" class="max-w-7xl mx-auto px-8 py-20 border-t border-white/5">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-800 mb-4">Included Mods</h2>
-            <p class="text-gray-500">カードをクリックすると、詳細な機能説明が表示されます。</p>
-        </div>
-
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 text-left">
-            <div class="glass p-5 rounded-2xl mod-card cursor-pointer border border-white/10"
-                onclick="openModModal('Keystrokes', 'W/A/S/Dキーの入力状況とマウスのクリックを画面上に表示します。PvP中のキー操作を視覚的に確認でき、色や透過度のカスタマイズも可能です。')">
-                <h4 class="font-bold text-blue-400 mb-1">Keystrokes</h4>
-                <p class="text-gray-500 text-xs uppercase tracking-widest">Combat</p>
-            </div>
-            <div class="glass p-5 rounded-2xl mod-card cursor-pointer border border-white/10"
-                onclick="openModModal('CPS Display', '1秒間あたりのクリック数を左右個別にカウントして表示します。')">
-                <h4 class="font-bold text-blue-400 mb-1">CPS Display</h4>
-                <p class="text-gray-500 text-xs uppercase tracking-widest">Combat</p>
-            </div>
-            <div class="glass p-5 rounded-2xl mod-card cursor-pointer border border-white/10"
-                onclick="openModModal('Armor Status', '装備中の防具の耐久値をHUDに表示します。')">
-                <h4 class="font-bold text-blue-400 mb-1">Armor Status</h4>
-                <p class="text-gray-500 text-xs uppercase tracking-widest">Utility</p>
-            </div>
-            <div class="glass p-5 rounded-2xl mod-card cursor-pointer border border-white/10"
-                onclick="openModModal('Motion Blur', '視点移動時に滑らかな残像を追加します。')">
-                <h4 class="font-bold text-blue-400 mb-1">Motion Blur</h4>
-                <p class="text-gray-500 text-xs uppercase tracking-widest">Visual</p>
-            </div>
-            <div class="glass p-5 rounded-2xl mod-card cursor-pointer border border-white/10"
-                onclick="openModModal('Crosshair Editor', '独自の十字カーソルを自由に作成可能です。')">
-                <h4 class="font-bold text-blue-400 mb-1">Crosshair Editor</h4>
-                <p class="text-gray-500 text-xs uppercase tracking-widest">Visual</p>
-            </div>
-            <div class="glass p-5 rounded-2xl mod-card cursor-pointer border border-white/10"
-                onclick="openModModal('FPS Counter', '現在のフレームレートをリアルタイムで表示します。')">
-                <h4 class="font-bold text-blue-400 mb-1">FPS Counter</h4>
-                <p class="text-gray-500 text-xs uppercase tracking-widest">Performance</p>
-            </div>
-            <div class="glass p-5 rounded-2xl mod-card cursor-pointer border border-white/10"
-                onclick="openModModal('Toggle Sprint', '一度キーを押すだけでダッシュを維持します。')">
-                <h4 class="font-bold text-blue-400 mb-1">Toggle Sprint</h4>
-                <p class="text-gray-500 text-xs uppercase tracking-widest">Combat</p>
-            </div>
-            <div class="glass p-5 rounded-2xl mod-card cursor-pointer border border-white/10"
-                onclick="openModModal('Fullbright', '洞窟や夜間でも視界を最大限に明るくします。')">
-                <h4 class="font-bold text-blue-400 mb-1">Fullbright</h4>
-                <p class="text-gray-500 text-xs uppercase tracking-widest">Visual</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- フッター -->
-    <footer class="border-t border-white/10 py-12 text-center text-gray-500 text-sm">
-        <div class="flex justify-center mb-6">
-            <img src="logo.png" alt="Wind V Logo"
-                class="w-10 h-10 opacity-50 grayscale hover:grayscale-0 transition duration-300">
-        </div>
-        <p>&copy; 2026 Wind V Client. Built with Rust and Passion.</p>
-    </footer>
-
-    <!-- モーダル -->
-    <div id="modModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center px-4">
-        <div class="absolute inset-0 bg-black/80 backdrop-blur-md" onclick="closeModModal()"></div>
-        <div class="glass bg-[#12161f] p-8 rounded-3xl max-w-lg w-full relative z-[110] border border-blue-500/30 shadow-2xl">
-            <h3 id="modalTitle" class="text-3xl font-800 mb-4 text-blue-400">Mod Name</h3>
-            <p id="modalDescription" class="text-gray-300 leading-relaxed">Description...</p>
-            <button onclick="closeModModal()"
-                class="mt-8 w-full py-4 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-500 transition-all shadow-lg shadow-blue-500/20">
-                閉じる
-            </button>
-        </div>
-    </div>
-
-    <script>
-        function openModModal(title, description) {
-            const modal = document.getElementById('modModal');
-            document.getElementById('modalTitle').innerText = title;
-            document.getElementById('modalDescription').innerText = description;
-            modal.classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModModal() {
-            const modal = document.getElementById('modModal');
-            modal.classList.add('hidden');
-            document.body.style.overflow = 'auto';
-        }
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeModModal();
-        });
-    </script>
-
-</body>
-
-</html>
+        <p class="text-gray-400 text-lg md:text-xl max-w
